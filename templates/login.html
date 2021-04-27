@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
+    <style>
+        body {
+            background-color: rgb(43, 42, 42);
+        }
+
+        label,
+        button {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
+
+        .button {
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: #f5f0f0;
+            color: #1bc95ed5;
+            border: 2px solid #202020d5;
+            font-weight: 500;
+        }
+
+        .button1:hover {
+            background-color: #1bc95ed5;
+            color: black;
+        }
+    </style>
+    <style>
+        .content {
+            width: 250px;
+            padding: 25px 50px;
+            border: 3px solid #1bc95ed5;
+            background-color: #f5f0f0;
+            border-radius: 8px;
+            padding-left: 60px;
+        }
+
+        textarea:focus,
+        input:focus,
+        select:focus {
+            box-shadow: 0 0 0 0;
+            border-bottom: 2px solid #1bc95ed5;
+            outline: 0;
+            background-color: none;
+
+        }
+
+        input:hover {
+            transition: 0.5s;
+        }
+
+        input {
+            border: none;
+            border-bottom: 2px solid #1d1d1d;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: #f5f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="{{url_for('logar')}}" method=" POST">
+        <div style="margin-left: 410px; margin-top: 130px;" class="content">
+            <label style="margin-left: 29px;">RA:</label>
+            <input type="text" name="ra" required style="margin-left: 13px;">
+            <br>
+            <br>
+            <label style="margin-left: 9px;">Senha:</label>
+            <input type="password" name="senha" required style="margin-left: 10px;">
+            <br>
+            <br>
+            <button class="button button1" type="submit"
+                style="margin-left: 62px; margin-top: 20px; font-weight: bold;">Entrar</button>
+        </div>
+    </form>
+</body>
+
+</html>

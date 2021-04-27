@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Sucessful</title>
+    <style>
+        body {
+            background-color: rgb(43, 42, 42);
+        }
+
+        label,
+        button {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            padding-right: 40px;
+        }
+
+        .button {
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: #f5f0f0;
+            color: #1bc95ed5;
+            border: 2px solid #202020d5;
+            font-weight: 500;
+        }
+
+        .button1:hover {
+            background-color: #1bc95ed5;
+            color: black;
+        }
+    </style>
+    <style>
+        .content {
+            width: 380px;
+            padding: 35px 30px 30px 75px;
+            border: 3px solid #1bc95ed5;
+            background-color: #f5f0f0;
+            border-radius: 8px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin-left: 365px; margin-top: 180px;" class="content">
+        <label>Cadastro criado com sucesso!</label>
+        <form action="{{url_for('encaminhar')}}" method="POST">
+            <button class="button button1" type="submit"
+                style="margin-left: 85px; margin-top: 35px; font-weight: bold;">Ir para
+                Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
